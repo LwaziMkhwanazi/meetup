@@ -6,7 +6,7 @@ import {MongoClient} from "mongodb"
             try {
                 const data = req.body
                 const {title,description,image,address} = data
-                const client = await  MongoClient.connect('mongodb+srv://Lwazim:lwazi209@cluster0.0sjak.mongodb.net/Meet-ups?retryWrites=true&w=majority')
+                const client = await  MongoClient.connect('')
                 const db = client.db()
                     const meetupCollections = db.collection('meetups')
                   const results = await meetupCollections.insertOne({title,description,image,address})
